@@ -1,0 +1,97 @@
+/* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 180px; /* Ajuste la valeur selon la hauteur de ton menu */
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-control, .form-control-file {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.img-preview-frame {
+    border: 8px solid #555; /* Bordure épaisse pour le cadre */
+    background: linear-gradient(145deg, #b0b0b0, #ffffff); /* Dégradé de couleur pour le métal */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.5); /* Ombres pour effet de profondeur */
+    padding: 10px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis du cadre */
+    height: 250px; /* Hauteur fixe pour le cadre */
+    position: relative; /* Positionnement pour l'image */
+    overflow: hidden; /* Cache l'excès d'image qui dépasse du cadre */
+}
+
+.img-preview {
+    width: 100%; /* Remplit la largeur du cadre */
+    height: 100%; /* Remplit la hauteur du cadre */
+    object-fit: cover; /* Remplissage sans déformation */
+    display: none; /* Cachée par défaut */
+}
+
+#noImageText {
+    position: absolute; /* Positionne le texte au centre du cadre */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centre le texte */
+    color: #777; /* Couleur du texte */
+    display: block; /* Affiche le texte par défaut */
+    font-weight: bold; /* Met en gras le texte */
+}
+
+/* Styles spécifiques pour le sélecteur de taille */
+#cadreSize {
+    width: 100%; /* Prend toute la largeur disponible */
+    max-width: 500px; /* Largeur maximale selon tes besoins */
+    height: 50px; /* Ajuste la hauteur ici */
+    padding: 10px; /* Ajoute de l'espace à l'intérieur du sélecteur */
+    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur totale */
+}
+
+/* Media Queries pour petits écrans */
+@media (max-width: 576px) {
+    form {
+        padding: 15px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}

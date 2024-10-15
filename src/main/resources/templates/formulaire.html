@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire - TalkART</title>
+    <meta name="description" content="Page de formulaire pour TalkART. Remplissez les informations pour personnaliser vos tableaux.">
+    <!-- Intégration de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/formulaire.css">
+	<link rel="stylesheet" href="/style/menu_foot.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+	<!-- Barre de navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+	    <div class="container">
+			<a class="navbar-brand d-flex align-items-center" href="#">
+			    <img src="/image/logo.jpeg" alt="Logo MonArt" width="100" height="70" class="d-inline-block align-top">
+			    <span class="ml-2 font-weight-bold text-orange">Talk Art</span>
+			</a>
+
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	            <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbarNav">
+	            <ul class="navbar-nav ml-auto">
+	                <li class="nav-item">
+	                    <a class="nav-link" href="#">Accueil</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="#">Nous découvrir</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="#">Exemples</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="#">Contact</a>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	</nav>
+
+	<form class="text-left">
+	    <div class="form-row">
+	        <div class="form-group col-md-6">
+	            <label for="nom">Nom</label>
+	            <input type="text" class="form-control" id="nom" placeholder="Votre nom" required>
+	        </div>
+	        <div class="form-group col-md-6">
+	            <label for="prenom">Prénom</label>
+	            <input type="text" class="form-control" id="prenom" placeholder="Votre prénom" required>
+	        </div>
+	    </div>
+	
+	    <div class="form-row">
+	        <div class="form-group col-md-6">
+	            <label for="email">Adresse email</label>
+	            <input type="email" class="form-control" id="email" placeholder="Votre email" required>
+	        </div>
+	        <div class="form-group col-md-6">
+	            <label for="telephone">Numéro de téléphone</label>
+	            <input type="tel" class="form-control" id="telephone" placeholder="Votre numéro de téléphone" required>
+	        </div>
+	    </div>
+	
+	    <div class="form-group">
+	        <label for="adresse">Adresse de livraison</label>
+	        <input type="text" class="form-control" id="adresse" placeholder="Votre adresse complète" required>
+	    </div>
+	
+	    <div class="form-group">
+	        <label for="cadreSize">Taille du cadre</label>
+	        <select class="form-control" id="cadreSize" required>
+	            <option value="" disabled selected>Sélectionnez une taille</option>
+	            <option value="25-40">25 cm / 40 cm</option>
+	            <option value="50-65">50 cm / 65 cm</option>
+	            <option value="75-100">75 cm / 100 cm</option>
+	        </select>
+	    </div>
+	
+		<div class="form-group">
+		    <label for="imageUpload">Téléchargez votre image</label>
+		    <input type="file" class="form-control-file" id="imageUpload" accept="image/*" required>
+		    
+		    <div class="img-preview-container mt-3">
+		        <h5>Aperçu de l'image téléchargée :</h5>
+		        <div class="img-preview-frame">
+		            <img id="imgPreview" class="img-preview" alt="Aperçu de l'image téléchargée" style="display: none;">
+		            <p id="noImageText" style="display: block; color: #777;">Aucune image téléchargée.</p>
+		        </div>
+		    </div>
+		</div>
+
+	
+		<div class="text-center mt-3">
+		       <button type="submit" class="btn btn-primary btn-lg">Suivant</button>
+		</div>
+	</form>
+	
+	
+	
+	<!-- Script JavaScript -->
+	    <script>
+	        document.getElementById('imageUpload').addEventListener('change', function(event) {
+	            const imgPreview = document.getElementById('imgPreview');
+	            const noImageText = document.getElementById('noImageText');
+	
+	            const file = event.target.files[0];
+	            if (file) {
+	                const reader = new FileReader();
+	                reader.onload = function(e) {
+	                    imgPreview.src = e.target.result;
+	                    imgPreview.style.display = 'block'; // Affiche l'image
+	                    noImageText.style.display = 'none'; // Cache le texte "Aucune image téléchargée"
+	                };
+	                reader.readAsDataURL(file);
+	            } else {
+	                imgPreview.style.display = 'none'; // Cache l'image si aucun fichier
+	                noImageText.style.display = 'block'; // Affiche le texte "Aucune image téléchargée"
+	            }
+	        });
+	    </script>
+
+
+
+	<!-- Footer -->
+	<footer class="bg-dark text-white pt-4 pb-2">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-4 mb-3">
+	                <h5>Contactez-nous</h5>
+	                <p>
+	                    Email: <a href="mailto:contact@monart.com" class="text-white">contact@monart.com</a><br>
+	                    Téléphone: <a href="tel:+33123456789" class="text-white">+33 1 23 45 67 89</a>
+	                </p>
+	            </div>
+	            <div class="col-md-4 mb-3">
+	                <h5>Liens rapides</h5>
+	                <ul class="list-unstyled">
+	                    <li><a href="#" class="text-white">Accueil</a></li>
+	                    <li><a href="#" class="text-white">Nous découvrir</a></li>
+	                    <li><a href="#" class="text-white">Exemples</a></li>
+	                    <li><a href="#" class="text-white">Contact</a></li>
+	                </ul>
+	            </div>
+	            <div class="col-md-4 mb-3">
+	                <h5>Suivez-nous</h5>
+	                <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
+	                <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
+	                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+	            </div>
+	        </div>
+	        <div class="text-center">
+	            <p class="m-0">© 2024 MonArt. Tous droits réservés.</p>
+	        </div>
+	    </div>
+	</footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

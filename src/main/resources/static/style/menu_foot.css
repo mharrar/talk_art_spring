@@ -1,0 +1,47 @@
+/* Styles du menu */
+.navbar {
+    padding: 1rem; /* Ajoute un peu d'espace autour de la navbar */
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center; /* Centre verticalement le contenu */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white; /* Couleur des liens de navigation */
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: orange; /* Couleur au survol des liens de navigation */
+}
+
+/* Styles du pied de page */
+footer {
+    padding: 2rem 0; /* Espacement vertical */
+}
+
+footer h5 {
+    font-weight: bold; /* Met en gras les titres du pied de page */
+}
+
+footer a {
+    color: white; /* Couleur des liens dans le pied de page */
+}
+
+footer a:hover {
+    color: orange; /* Couleur au survol des liens du pied de page */
+}
+.carousel-inner img {
+    max-width: 60%; /* Ajustez cette valeur pour modifier la taille globale des images */
+    height: auto; /* Conserve les proportions de l'image */
+    margin: 0 auto; /* Centre l'image dans le conteneur */
+}
+
+.text-orange {
+    color: orange; /* Met le texte en orange */
+}
+/* S'assure que le texte est en gras et centré verticalement */
+.font-weight-bold {
+    font-weight: bold;
+}
