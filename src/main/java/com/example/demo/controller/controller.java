@@ -24,4 +24,9 @@ public class controller {
 	public String formulaire() {
 		return "formulaire"; // Nom du fichier HTML sans l'extension .html
 		}
+	@GetMapping("/Galerie")
+	public String Galerie() {
+		return "Galerie"; // Nom du fichier HTML sans l'extension .html
+		}
+	
 }

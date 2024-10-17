@@ -31,4 +31,9 @@
     padding: 2rem; /* Remplacez ceci par la valeur que vous préférez */
     border-radius: 0.5rem; /* Coins arrondis pour le conteneur */
 }
+@media (max-width: 576px) {
+    .hero-section {
+        padding-top: 120px; /* Ajustez pour mobile */
+    }
+}
 

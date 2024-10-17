@@ -1,0 +1,146 @@
+/* Palette de couleurs */
+:root {
+    --primary-color: #ff8c00; /* Orange */
+    --highlight-color: #f90000; /* Rouge */
+    --background-color: #f8f9fa; /* Couleur de fond */
+}
+
+/* Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: #333;
+}
+
+/* Espacement supérieur pour le contenu principal */
+main {
+    margin-top: 100px; /* Ajuste cette valeur pour déplacer le contenu plus bas */
+}
+
+/* Titres de la section Tableaux personnalisés */
+h2 {
+    font-size: 2.5rem; /* Taille de police du titre */
+    color: var(--highlight-color); /* Couleur rouge */
+    margin-bottom: 20px; /* Espacement inférieur */
+    text-align: center; /* Centrer le texte */
+}
+
+/* Paragraphe principal dans la section Tableaux personnalisés */
+.text-center p {
+    font-size: 1.1rem; /* Taille de police légèrement réduite */
+    color: #333; /* Couleur sombre */
+    line-height: 1.5; /* Espacement entre les lignes */
+    margin-bottom: 15px; /* Espacement inférieur */
+}
+
+/* Ajustement de l'image dans la section Tableaux personnalisés */
+.wp-block-image img {
+    max-width: 50%; /* Limite la largeur de l'image à 50% */
+    height: auto; /* Maintient le ratio de l'image */
+    margin: 0 auto; /* Centrer l'image */
+    display: block; /* Afficher en tant qu'élément de bloc pour centrer */
+}
+
+/* Style pour les boutons */
+.btn-lg {
+    font-size: 1.2rem; /* Taille de police pour les boutons */
+    padding: 15px 30px; /* Ajuste le rembourrage pour les boutons */
+}
+
+/* Titres */
+.title, h2 {
+    margin-bottom: 20px; /* Espacement inférieur */
+}
+
+/* Textes d'introduction */
+.intro-text {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Blocs de contenu */
+.content-block {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Style des éléments en surbrillance */
+.highlight {
+    color: var(--highlight-color);
+}
+
+/* Boutons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #ff6f00; /* Couleur plus foncée au survol */
+    transform: scale(1.05);
+}
+
+/* Images */
+.img-fluid {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Citations */
+.blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    color: var(--highlight-color);
+}
+
+/* Conteneurs d'images */
+.img-container {
+    width: 100%;
+    height: 200px; /* Taille fixe pour les conteneurs d'images */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* S'assure que l'image remplit le conteneur */
+}
+/* Appliquer l'image de fond uniquement au conteneur principal */
+.container.mt-4 {
+    position: relative; /* Pour positionner les éléments enfants */
+    background-image: url('/image/old_medina_1.jpeg'); /* Remplacez par l'URL de votre image */
+    background-size: cover; /* Pour couvrir tout le conteneur */
+    background-position: center; /* Centre l'image */
+    width: 100%; /* S'assure que le conteneur prend toute la largeur */
+    max-width: 100vw; /* Empêche le conteneur de dépasser la largeur de la fenêtre */
+    margin-left: auto; /* Centre le conteneur */
+    margin-right: auto; /* Centre le conteneur */
+    overflow: hidden; /* Assure qu'aucun contenu ne dépasse le conteneur */
+}
+
+/* Fond blanc pour les blocs internes afin de conserver la lisibilité */
+.content-block {
+    background-color: white; /* Fond blanc pour les blocs internes */
+    border-radius: 10px; /* Arrondit les coins pour correspondre au conteneur */
+    padding: 20px; /* Ajoute du rembourrage à l'intérieur des blocs */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre pour le bloc */
+}
+
+/* Texte de couleur sombre pour la lisibilité */
+.text-center, .intro-text, .title {
+    color: #333; /* Assure que le texte est sombre pour la lisibilité */
+}
+.content-block {
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc avec 70% de transparence */
+    border-radius: 10px; /* Arrondit les coins du bloc */
+    padding: 20px; /* Ajoute du rembourrage à l'intérieur du bloc */
+}
