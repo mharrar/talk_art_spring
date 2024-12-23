@@ -1,0 +1,52 @@
+/* Ajustement du cadre pour l'image */
+.image-container {
+    margin-top: 20px;
+}
+
+.img-frame {
+    border: 5px solid #ccc; /* Bordure du cadre */
+    padding: 10px; /* Espace entre l'image et le cadre */
+    width: 100%; /* Largeur du cadre */
+    max-width: 400px; /* Largeur maximale pour les écrans plus grands */
+    height: 200px; /* Hauteur fixe du cadre */
+    margin: 0 auto; /* Centre le cadre horizontalement */
+    background-color: #f8f8f8; /* Couleur de fond du cadre */
+    border-radius: 8px; /* Coins arrondis */
+    display: flex; /* Pour centrer l'image */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    overflow: hidden; /* Cache les débordements d'image */
+}
+
+.img-frame img {
+    min-width: 100%; /* Assure que l'image remplit au moins la largeur du cadre */
+    min-height: 100%; /* Assure que l'image remplit au moins la hauteur du cadre */
+    object-fit: cover; /* Couvre complètement le cadre en maintenant les proportions */
+}
+
+
+/* Styles pour le formulaire */
+.form-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    max-width: 600px; /* Aligné avec la taille du cadre d'image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section .form-group {
+    margin-bottom: 15px;
+}
+
+#price {
+    font-size: 20px;
+    color: #28a745;
+    text-align: center;
+}
+
+/* Bouton PayPal */
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 16px;
+}

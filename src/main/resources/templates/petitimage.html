@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de l'image - TalkART</title>
+    <meta name="description" content="Page de confirmation de l'image téléchargée avec formulaire de validation et paiement.">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/style/menu_foot.css"> <!-- Menu et footer obligatoire -->
+    <link rel="stylesheet" href="/style/petitimage.css"> <!-- Styles spécifiques à la page -->
+</head>
+<body>
+
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/accuel">
+                <img src="/image/logo.jpeg" alt="Logo MonArt" width="100" height="70" class="d-inline-block align-top">
+                <span class="ml-2 font-weight-bold text-orange">Talk Art</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/nous_découvrir">Nous découvrir</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Galerie">Galerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+        <!-- Cadre pour l'image téléchargée -->
+        <div class="image-container text-center">
+            <div class="img-frame">
+                <!-- Affichage de l'image encodée en Base64 -->
+                <img th:src="${image}" id="uploadedImage" class="img-fluid" alt="Image téléchargée">
+            </div>
+        </div>
+
+        <!-- Formulaire de validation -->
+        <div class="form-section mt-4">
+            <form action="/submitFinalForm" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control form-control-sm" id="email" name="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" class="form-control form-control-sm" id="telephone" name="telephone" placeholder="Votre numéro de téléphone" required>
+                </div>
+                <div class="form-group">
+                    <label for="adresse">Adresse de livraison</label>
+                    <input type="text" class="form-control form-control-sm" id="adresse" name="adresse" placeholder="Votre adresse complète" required>
+                </div>
+                <div class="form-group">
+                    <label for="price">Prix total</label>
+                    <p class="font-weight-bold text-success" id="price">400 DH</p>
+                </div>
+
+                <!-- Bouton de paiement PayPal -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-sm">Payer avec PayPal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-4 pb-2 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Contactez-nous</h5>
+                    <p>
+                        Email: <a href="mailto:contact@monart.com" class="text-white">contact@monart.com</a><br>
+                        Téléphone: <a href="tel:+33123456789" class="text-white">+33 1 23 45 67 89</a>
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/accueil" class="text-white">Accueil</a></li>
+                        <li><a href="/nous_découvrir" class="text-white">Nous découvrir</a></li>
+                        <li><a href="/Galerie" class="text-white">Galerie</a></li>
+                        <li><a href="/contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Suivez-nous</h5>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="text-center">
+                <p class="m-0">© 2024 TalkArt. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

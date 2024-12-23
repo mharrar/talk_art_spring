@@ -123,3 +123,14 @@ form {
 }
 
 
+.input-group .input-group-prepend .custom-select {
+    margin: 0; /* Supprime tout espace additionnel */
+}
+
+.input-group .form-control {
+    margin: 0; /* Supprime tout espace additionnel */
+}
+
+
+
+

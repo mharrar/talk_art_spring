@@ -37,3 +37,20 @@
     }
 }
 
+
+.text-bold-black {
+    font-weight: 700;
+    color: black !important;
+}
+
+
+.custom-bg {
+    background: linear-gradient(45deg, #f7e6b9, #fff700); /* Dégradé beige vers jaune */
+    transition: all 0.3s ease;
+}
+
+.custom-bg:hover {
+    background: linear-gradient(45deg, #f7e6b9, #fff700); /* Dégradé beige vers jaune sur hover */
+    transform: scale(1.05); /* Zoom effect */
+}
+
