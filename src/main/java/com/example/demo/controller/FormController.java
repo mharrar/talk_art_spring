@@ -66,9 +66,9 @@ public class FormController {
                     case "25-40":
                         return "petitimage"; // Essayer une redirection explicite
                     case "50-65":
-                        return "accueil";      // Vue pour une taille de cadre moyenne
+                        return "moyenimage";      // Vue pour une taille de cadre moyenne
                     case "75-100":
-                        return "accueil";      // Vue pour une grande taille de cadre
+                        return "grandimage";      // Vue pour une grande taille de cadre
                     default:
                         redirectAttributes.addFlashAttribute("errorMessage", "Taille de cadre invalide.");
                         return "redirect:/accueil"; // Redirige vers la page d'erreur si aucune taille valide n'est sélectionnée
