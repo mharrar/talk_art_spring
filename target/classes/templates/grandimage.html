@@ -3,19 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page de confirmation de l'image téléchargée avec formulaire de validation et paiement pour le site TalkArt. Découvrez comment créer une œuvre d'art personnalisée.">
-    <meta name="keywords" content="confirmation image, TalkArt, art personnalisé, paiement, commande d'œuvre, peinture sur commande, gallery, art marocain">
-    <meta name="author" content="TalkArt">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Confirmation de l'image - TalkArt">
-    <meta property="og:description" content="Page de confirmation de l'image téléchargée avec formulaire de validation et paiement.">
-    <meta property="og:image" content="http://localhost/TalkArt/image/logo.jpeg">
-    <meta property="og:url" content="http://localhost/TalkArt/confirmation_image">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Confirmation de l'image - TalkArt">
-    <meta name="twitter:description" content="Page de confirmation de l'image téléchargée avec formulaire de validation et paiement.">
-    <meta name="twitter:image" content="http://localhost/TalkArt/image/logo.jpeg">
-    <title>Confirmation de l'image - TalkArt - Commandez Votre Œuvre d'Art Personnalisée</title>
+    <title>Confirmation de l'image - TalkART</title>
+    <meta name="description" content="Page de confirmation de l'image téléchargée avec formulaire de validation et paiement.">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="/style/menu_foot.css"> <!-- Menu et footer obligatoire -->
@@ -27,7 +16,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="/accuel">
-                <img src="/image/logo.jpeg" alt="Logo TalkArt" width="100" height="70" class="d-inline-block align-top">
+                <img src="/image/logo.jpeg" alt="Logo MonArt" width="100" height="70" class="d-inline-block align-top">
                 <span class="ml-2 font-weight-bold text-orange">Talk Art</span>
             </a>
 
@@ -55,18 +44,18 @@
 
     <div class="container mt-5 pt-5">
         
+
         <!-- Cadre pour l'image téléchargée -->
         <div class="image-container text-center">
             <div class="img-frame">
                 <!-- Affichage de l'image encodée en Base64 -->
-                <img th:src="${image}" id="uploadedImage" class="img-fluid" alt="Image téléchargée - Art personnalisé TalkArt">
+                <img th:src="${image}" id="uploadedImage" class="img-fluid" alt="Image téléchargée">
             </div>
         </div>
 
         <!-- Formulaire de validation -->
         <div class="form-section mt-4">
-            <h2 class="text-center mb-4">Confirmez votre commande d'œuvre d'art</h2>
-            <form action="/firstgateway" method="POST">
+            <form action="/thirdgateway" method="POST">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" class="form-control form-control-sm" id="email" name="email" placeholder="Votre email" required>
@@ -79,10 +68,10 @@
                     <label for="adresse">Adresse de livraison</label>
                     <input type="text" class="form-control form-control-sm" id="adresse" name="adresse" placeholder="Votre adresse complète" required>
                 </div>
-                <div class="form-group">
-                    <label for="price">Prix total</label>
-                    <p class="font-weight-bold text-success" id="price">2300 DH <br> <span style="color: blue;">220 €</span></p>
-                </div>
+				<div class="form-group">
+				    <label for="price">Prix total</label>
+					<p class="font-weight-bold text-success" id="price">3600 DH <br> <span style="color: blue;">340 €</span></p>
+				</div>
 
                 <!-- Bouton de paiement PayPal -->
                 <div class="text-center">
@@ -129,5 +118,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
+   
 </body>
 </html>

@@ -49,6 +49,12 @@ public class FormController {
         try {
             // Vérifiez si l'image n'est pas vide
             if (!image.isEmpty()) {
+            	
+            	  String contentType = image.getContentType();
+                  if (!"image/jpeg".equals(contentType) && !"image/png".equals(contentType)) {
+                      redirectAttributes.addFlashAttribute("errorMessage", "Le fichier téléchargé n'est pas une image valide (seules les images JPEG et PNG sont acceptées).");
+                      return "redirect:/formulaire";  // Redirige vers la page d'accueil en cas d'erreur
+                  }
                 // Convertir l'image en tableau de bytes
                 byte[] imageBytes = image.getBytes();
                 // Convertir en Base64 pour l'affichage

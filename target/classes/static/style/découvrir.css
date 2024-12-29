@@ -1,0 +1,14 @@
+.col-md-6 .lead {
+    font-size: 1.2rem; /* Ajustez la taille du texte principal comme souhaité */
+    line-height: 1.6; /* Améliore l'espacement entre les lignes pour une meilleure lisibilité */
+}
+/* Style pour les images des membres de l'équipe */
+.row.mt-4 .col-md-3 img {
+    width: 150px; /* Ajustez la largeur souhaitée */
+    height: 150px; /* Ajustez la hauteur souhaitée */
+    object-fit: cover; /* Assure que l'image remplit son conteneur */
+    border-radius: 50%; /* Maintient l'image arrondie */
+}
+.main-content {
+    padding-top: 40px; /* Ajustez cette valeur pour augmenter l'espace */
+}
