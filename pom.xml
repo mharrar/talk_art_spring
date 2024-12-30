@@ -29,6 +29,8 @@
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -104,6 +106,11 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+            	<groupId>org.apache.maven.plugins</groupId>
+            	<artifactId>maven-surefire-plugin</artifactId>
+            	<version>3.2.5</version> <!-- Vous pouvez choisir la version la plus récente -->
+        </plugin>
 		</plugins>
 	</build>
 	
