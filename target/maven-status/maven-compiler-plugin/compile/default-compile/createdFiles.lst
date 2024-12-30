@@ -1,0 +1,6 @@
+com\example\demo\service\EmailService.class
+com\example\demo\controller\controller.class
+com\example\demo\TalkartApplication.class
+com\example\demo\controller\PaymentControllerFirst.class
+com\example\demo\controller\FormController.class
+com\example\demo\controller\ContactController.class
